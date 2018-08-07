@@ -31,7 +31,7 @@ resource "aws_instance" "web" {
 
   connection {
     user        = "ubuntu"
-    private_key = "${file("~/.ssh/id_rsa")}"
+    private_key = "${var.private_key}"
   }
 
   provisioner "file" {
